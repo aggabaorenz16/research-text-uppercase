@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text UpperCase</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        * {
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgba(224, 230, 235, 0.874);
+        }
+        .form {
+            display: grid;
+            justify-content: center;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .form button {
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 17px;
+            background-color: rgba(38, 58, 239, 0.793);
+            color:  white;
+            border: none;
+            
+        }
+        textarea {
+            text-align: center;
+            font-size: 16px;
+            resize: none;
+            padding: 1rem;
+            
+        }
+        p {
+            padding: 1rem;
+            margin: 1rem;
+            justify-content: center;
+            display: grid;
+        }
+        .form h1 {
+            font-size: 23px;
+            color: rgba(38, 58, 239, 0.793);
+            display: grid;
+            justify-content: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1>LOWERCASE TO UPPERCASE</h1>
+        <textarea   id="text" cols="80" rows="15" placeholder="Text Area" ></textarea>
+        <p id="result">Result</p>
+    <button onclick="UpperCase()" id="submit">UpperCase</button>
+    </div>
+</body>
+<script>
+   
+    const UpperCase = () => {
+        const data = document.querySelector("#text").value;
+        const res = document.querySelector("#result");
+        res.innerHTML = data.toUpperCase();
+        res.style.color = 'red'
+        res.style.padding = '0rem'
+        res.style.fontSize = '20px'
+        if(data == "") {
+            alert("Please input text!")
+        } else {
+            alert("Look at the result")
+        }
+    } 
+</script>
+</html>
